@@ -65,6 +65,8 @@
     <Compile Include="Assets\_Scripts\Boundary.cs" />
     <Compile Include="Assets\_Scripts\BulletScript.cs" />
     <Compile Include="Assets\_Scripts\GalaxyController.cs" />
+    <Compile Include="Assets\_Scripts\GameController.cs" />
+    <Compile Include="Assets\_Scripts\MeteorScript.cs" />
     <Compile Include="Assets\_Scripts\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\Speed.cs" />
     <Reference Include="Unity.Timeline.Editor">

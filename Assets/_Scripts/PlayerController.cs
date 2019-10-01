@@ -6,10 +6,21 @@ public class PlayerController : MonoBehaviour
 {
     public Speed speed;
     public Boundary boundary;
+
+    [SerializeField]
+    private GameObject playerBullet;
+
+    [SerializeField]
+    private Transform attackPoint;
+
+    public float attackTimer = 0.35f;
+    private float currentAttackTimer;
+    private bool canAttack;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentAttackTimer = attackTimer;
     }
 
     // Update is called once per frame
@@ -17,6 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         move();
         CheckBound();
+        Attack();
     }
     /// <summary>
     /// This method use to move the player in x axis only
@@ -49,6 +61,27 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x < boundary.Left)
         {
             transform.position = new Vector2(boundary.Left, transform.position.y);
+        }
+    }
+    /// <summary>
+    /// This method instantiate bullets from a game object and
+    /// restrict the player from spamming the shoot button
+    /// </summary>
+    void Attack()
+    {
+        attackTimer += Time.deltaTime;
+        if(attackTimer > currentAttackTimer)
+        {
+            canAttack = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if(canAttack)
+            {
+                canAttack = false;
+                attackTimer = 0f;
+                Instantiate(playerBullet, attackPoint.position, Quaternion.identity);
+            }  
         }
     }
 }

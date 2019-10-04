@@ -6,6 +6,8 @@ public class BulletScript : MonoBehaviour
 {
     public float speed = 0.5f;
     public float deactivateTimer = 3f;
+
+    public GameController gameController;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +32,13 @@ public class BulletScript : MonoBehaviour
     void DeactivateGameObject()
     {
         gameObject.SetActive(false);
+    }
+    void OnTriggerEnter2D(Collider2D target)
+    {
+        if(target.tag == "Bullet" || target.tag == "Enemy")
+        {
+            gameObject.SetActive(false);
+        }
+        gameController.Score += 100;
     }
 }

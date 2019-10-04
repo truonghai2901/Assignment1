@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\_Scripts\Boundary.cs" />
     <Compile Include="Assets\_Scripts\BulletScript.cs" />
+    <Compile Include="Assets\_Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\_Scripts\GalaxyController.cs" />
     <Compile Include="Assets\_Scripts\GameController.cs" />
     <Compile Include="Assets\_Scripts\MeteorScript.cs" />

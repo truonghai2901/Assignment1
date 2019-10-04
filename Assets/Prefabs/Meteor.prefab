@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3038322905734767542}
   m_Layer: 0
   m_Name: Meteor
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +109,11 @@ MonoBehaviour:
     Right: 2.17
     Bottom: -2.1
     Left: -2.17
+  rotateSpeed: 50
+  canRotate: 1
+  canMove: 1
+  gameController: {fileID: 9223192632483402296, guid: f841f59728cfe6d4a8285547e397711c,
+    type: 3}
 --- !u!58 &3038322905734767544
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -119,7 +124,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

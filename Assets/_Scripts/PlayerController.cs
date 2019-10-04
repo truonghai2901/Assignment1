@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private float currentAttackTimer;
     private bool canAttack;
 
+    public GameController gameController;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,6 +83,15 @@ public class PlayerController : MonoBehaviour
                 attackTimer = 0f;
                 Instantiate(playerBullet, attackPoint.position, Quaternion.identity);
             }  
+        }
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "Enemy":
+                gameController.Lives -= 1;
+                break;
         }
     }
 }

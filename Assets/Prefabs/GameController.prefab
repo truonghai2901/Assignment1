@@ -47,3 +47,7 @@ MonoBehaviour:
   _score: 0
   livesLabel: {fileID: 0}
   scoreLabel: {fileID: 0}
+  startLabel: {fileID: 0}
+  startButton: {fileID: 0}
+  endLabel: {fileID: 0}
+  restartButton: {fileID: 0}

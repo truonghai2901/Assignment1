@@ -144,6 +144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f4e7d65b836704a83a6db1eb4c62c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &458243006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 35882374, guid: 2fa5f65abaf755943817cee8a120892f,
+    type: 3}
+  m_PrefabInstance: {fileID: 950452263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +460,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9223192632483402296, guid: f841f59728cfe6d4a8285547e397711c,
+        type: 3}
+      propertyPath: startLabel
+      value: 
+      objectReference: {fileID: 1918484488}
+    - target: {fileID: 9223192632483402296, guid: f841f59728cfe6d4a8285547e397711c,
+        type: 3}
+      propertyPath: startButton
+      value: 
+      objectReference: {fileID: 1111191219}
+    - target: {fileID: 9223192632483402296, guid: f841f59728cfe6d4a8285547e397711c,
+        type: 3}
+      propertyPath: livesLabel
+      value: 
+      objectReference: {fileID: 1267121076}
+    - target: {fileID: 9223192632483402296, guid: f841f59728cfe6d4a8285547e397711c,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 54260350}
+    - target: {fileID: 9223192632483402296, guid: f841f59728cfe6d4a8285547e397711c,
+        type: 3}
+      propertyPath: endLabel
+      value: 
+      objectReference: {fileID: 2131859276}
+    - target: {fileID: 9223192632483402296, guid: f841f59728cfe6d4a8285547e397711c,
+        type: 3}
+      propertyPath: restartButton
+      value: 
+      objectReference: {fileID: 458243006}
     - target: {fileID: 9223192632483402299, guid: f841f59728cfe6d4a8285547e397711c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -509,31 +545,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9223192632483402296, guid: f841f59728cfe6d4a8285547e397711c,
-        type: 3}
-      propertyPath: startLabel
-      value: 
-      objectReference: {fileID: 1918484488}
-    - target: {fileID: 9223192632483402296, guid: f841f59728cfe6d4a8285547e397711c,
-        type: 3}
-      propertyPath: startButton
-      value: 
-      objectReference: {fileID: 1111191219}
-    - target: {fileID: 9223192632483402296, guid: f841f59728cfe6d4a8285547e397711c,
-        type: 3}
-      propertyPath: livesLabel
-      value: 
-      objectReference: {fileID: 1267121076}
-    - target: {fileID: 9223192632483402296, guid: f841f59728cfe6d4a8285547e397711c,
-        type: 3}
-      propertyPath: scoreLabel
-      value: 
-      objectReference: {fileID: 54260350}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f841f59728cfe6d4a8285547e397711c, type: 3}
 --- !u!1 &1918484488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1918484488, guid: 2fa5f65abaf755943817cee8a120892f,
+    type: 3}
+  m_PrefabInstance: {fileID: 950452263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2131859276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 411905766, guid: 2fa5f65abaf755943817cee8a120892f,
     type: 3}
   m_PrefabInstance: {fileID: 950452263}
   m_PrefabAsset: {fileID: 0}

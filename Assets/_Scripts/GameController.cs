@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour
     [Header("UI Control")]
     public GameObject startLabel;
     public GameObject startButton;
+    public GameObject endLabel;
+    public GameObject restartButton;
 
     //public properties
     public int Lives
@@ -30,6 +32,10 @@ public class GameController : MonoBehaviour
         set
         {
             _lives = value;
+            if (_lives <= 0)
+            {
+                SceneManager.LoadScene("End");
+            }
             livesLabel.text = "Lives: " + _lives.ToString();
         }
     }
@@ -53,10 +59,14 @@ public class GameController : MonoBehaviour
             case "Start":
                 scoreLabel.enabled = false;
                 livesLabel.enabled = false;
+                endLabel.SetActive(false);
+                restartButton.SetActive(false);
                 break;
             case "Main":
                 startLabel.SetActive(false);
                 startButton.SetActive(false);
+                endLabel.SetActive(false);
+                restartButton.SetActive(false);
                 break;
             case "End":
                 startLabel.SetActive(false);
@@ -75,6 +85,10 @@ public class GameController : MonoBehaviour
     }
     // Event Handlers
     public void OnStartButtonClick()
+    {
+        SceneManager.LoadScene("Main");
+    }
+    public void OnRestartButtonClick()
     {
         SceneManager.LoadScene("Main");
     }
